@@ -29,3 +29,21 @@ echo "*" > .gitignore
 - STEP2: デバッグ用ディレクトリ以下に git clone
 
 以上。これで go.mod を汚さずにリポジトリの関数が使えるはず。
+
+```text
+go_prj_root
+- .debug
+  - .gitignore
+  - go-jittoku
+    - README.md
+    - go.mod
+    - print.go <- ここの関数を使いたければ、
+    ...
+- go.mod
+- go.sum
+- cmd
+- src
+  - hoge_service.go <- ここでimportするだけでヨシ
+  - fuga_service.go
+- util
+```
